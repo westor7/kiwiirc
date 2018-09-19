@@ -54,7 +54,7 @@
                     class="kiwi-controlinput-tools-container-expand"
                     @click="showPlugins=!showPlugins"
                 >
-                    <i class="fa fa-angle-double-right" aria-hidden="true" />
+                    <i class="fa fa-bars" aria-hidden="true" />
                 </div>
                 <transition name="kiwi-plugin-ui-trans">
                     <div v-if="shouldShowPlugins" class="kiwi-controlinput-tools-container">
@@ -510,9 +510,11 @@ export default {
 }
 
 .kiwi-controlinput-tools {
-    line-height: 40px;
+    line-height: 37px;
     cursor: pointer;
     margin-left: 10px;
+    border: 1px solid transparent;
+    border-width: 1px 0;
 }
 
 .kiwi-controlinput-form {
@@ -523,7 +525,11 @@ export default {
 
 .kiwi-controlinput-send {
     border: none;
-    background: none;
+    border-radius: 50%;
+    background: #ccc;
+    height: 35px;
+    width: 35px;
+    margin-top: 2px;
     cursor: pointer;
     outline: none;
 }
@@ -595,6 +601,8 @@ export default {
 .kiwi-controlinput-tools-container-expand {
     display: inline-block;
     padding: 0 1em;
+    background: #ccc;
+    border-radius: 25% 0 0 25%;
 }
 
 .kiwi-controlinput-tools-container-expand i {
@@ -608,6 +616,7 @@ export default {
 .kiwi-controlinput-tools-container {
     position: relative;
     display: inline-block;
+    background: #ccc;
 }
 
 .kiwi-plugin-ui-trans-enter,
